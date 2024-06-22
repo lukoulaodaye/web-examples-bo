@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!-- 添加一些基本的CSS样式 -->
+    <style>
+        fieldset { margin-bottom: 20px; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="password"], input[type="date"], select { width: 30%; padding: 8px; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+<form action="/register" method="post">
+    <fieldset>
+        <legend>个人信息</legend>
+        <label for="username">用户名：<input type="text" id="username" required></label>
+        <label for="password">密码：<input type="password" id="password" required></label>
+        <label>性别：
+            <input id="male" name="gender" type="radio" value="male"> 男
+            <input id="female" name="gender" type="radio" value="female"> 女
+        </label>
+        <label for="birthday">生日：</label>
+        <input type="date" id="birthday" required>
+        <label for="province">籍贯：</label>
+        <input type="text" id="orig" list="province" required>
+        <datalist id="province">
+            <option value="哈尔滨">
+            <option value="沈阳">
+            <option value="长春">
+        </datalist>
+        <label for="education">学历：</label>
+        <select id="education" required>
+            <option value="">请选择</option>
+            <option value="bachelor" selected>学士</option>
+            <option value="master">硕士</option>
+            <option value="doctor">博士</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>其他信息</legend>
+        <label>喜欢的课程：</label>
+        <ul>
+            <li><label><input type="checkbox" name="courses" value="webdev" checked> Web开发技术</label></li>
+            <li><label><input type="checkbox" name="courses" value="java"> Java程序设计</label></li>
+            <li><label><input type="checkbox" name="courses" value="database"> 数据库原理</label></li>
+            <li><label><input type="checkbox" name="courses" value="testing"> 系统分析与测试</label></li>
+        </ul>
+        <label for="photo">照片：</label>
+        <input type="file" id="photo" accept=".jpg, .png">
+    </fieldset>
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+</form>
+</body>
+</html>

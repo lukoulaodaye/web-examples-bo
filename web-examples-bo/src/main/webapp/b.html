@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h3 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .label {
+            padding: 5px 10px;
+            border-radius: 3px;
+            color: white;
+            font-size: 12px;
+        }
+        .label-success {
+            background-color: green;
+        }
+        .label-warning {
+            background-color: orange;
+        }
+        .btn {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: 0 5px;
+        }
+        /* 超链接按钮样式 */
+        .btn {
+            display: inline-block;
+            background-color: #9C27B0; /* 暗红色 */
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 16px; /* 合适的字体大小 */
+        }
+
+        .btn:hover {
+            background-color: #7b1fa2; /* 鼠标悬浮时的背景色 */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>学生信息</h3>
+    <p>说明：以下为2046级学生名单，共4人，成功加载3人。<span class="label label-warning">警告：列表不包含降级学生。</span></p>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>班级</th>
+            <th>Email</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>郭立新</td>
+            <td>软件工程2046级1班</td>
+            <td>guo@example.com</td>
+            <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>黄英</td>
+            <td>软件工程2046级1班</td>
+            <td>huang@example.com</td>
+            <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>吕惠玲</td>
+            <td>软件工程2046级2班</td>
+            <td>lv@example.com</td> <!-- 修正了邮箱地址中的错别字 "Iv" 为 "lv" -->
+            <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

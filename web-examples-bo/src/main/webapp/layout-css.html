@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Layout</title>
+    <style>
+        /* Reset and base styles */
+        *, *::before, *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            padding: 10px;
+        }
+        @media (min-width: 768px) {
+            .col-md-3 { width: 25%; }
+            .col-md-9 { width: 75%; }
+        }
+
+        /* Header */
+        .header {
+            background: #333;
+            color: white;
+            padding: 15px 0;
+        }
+        .header ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #f1f1f1;
+        }
+        .sidebar h2 {
+            background: #3185bf;
+            color: white;
+            padding: 10px 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+            transition: background-color 0.5s;
+        }
+        .sidebar a:hover {
+            background-color: #03a9f4;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="row">
+        <!-- Sidebar -->
+        <aside class="sidebar col">
+            <h2>Cloud Technology Management</h2>
+            <ul>
+                <li><a href="#">Cloud Server</a></li>
+                <li><a href="#">Cloud Database</a></li>
+                <li><a href="#">Load Balancer</a></li>
+            </ul>
+            <h2>Security Management</h2>
+            <ul>
+                <li><a href="#">Cloud Shield Console</a></li>
+                <li><a href="#">DDoS Protection IP</a></li>
+                <li><a href="#">Web Application Firewall</a></li>
+                <li><a href="#">CA Certificate Service</a></li>
+            </ul>
+        </aside>
+
+        <!-- Article -->
+        <article class="col-md-9 col">
+            <!-- Article content goes here -->
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Northeast Forestry University<br>
+            Software Engineering 2046 &copy;</p>
+    </footer>
+</div>
+</body>
+</html>
